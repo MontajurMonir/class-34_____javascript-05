@@ -17,36 +17,22 @@ delBtn.addEventListener("click", () => {
 
 
 
-
-
-
 // Odd And Even Number Check
 
-
-let heading = document.getElementById("heading");
 let evenOddInp = document.getElementById("evenOddInp");
 let evenOddBtn = document.getElementById("evenOddBtn");
-let result = document.getElementById("result")
+let result = document.getElementById("result");
 
+  // number = evenOddInp.value;
 
- 
 evenOddBtn.addEventListener("click", () => {
-
-       let number = evenOddInp.value 
-            
-    
+  let para = document.createElement("h1");
+  result.appendChild(para);
   
-  
-    if (Number % 2 == 0) {
-    console.log(Number + " " + "is a even number.");
 
- 
-  } 
-
-  else {
-    console.log(Number + " " + "is a odd number.");
+  if (evenOddInp.value % 2 == 0) {
+    para.innerHTML = evenOddInp.value + " " + "is a even number.";
+  } else {
+    para.innerHTML = evenOddInp.value + " " + "is a odd number.";
   }
-
-
-
 });
